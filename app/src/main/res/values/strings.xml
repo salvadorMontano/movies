@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Movies</string>
+
+    <string-array name="options_of_filter">
+        <item>Popular</item>
+        <item>Top Rated</item>
+    </string-array>
+
+    <string name="api_key_themovie">6910787d7aa50f8e7bac38507c3ebc7a</string>
+    <string name="api_key_youtube">AIzaSyDeVZ_yCkXJ_YUXALoPLk4iXMvbVGaatMQ</string>
+
+
+</resources>

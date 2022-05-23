@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:background="@color/black"
+    tools:context=".ui.view.MovieDetailVideoActivity">
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtubePlayer"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/youtubePlayer">
+
+        <TextView
+            android:id="@+id/videoNameItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/videoPublishedAtItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:justificationMode="inter_word"/>
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp"
+            android:stretchColumns="*"
+            app:layout_constraintTop_toBottomOf="@+id/overviewItem"
+            tools:ignore="MissingConstraints"> <!-- stretch the second column of the layout-->
+            <!-- first row of the table layout-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!-- first element of the row-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    android:padding="5dip"
+                    android:text="Site"
+                    android:textColor="#676565"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    android:padding="5dip"
+                    android:text="Type"
+                    android:textColor="#676565"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent">
+                <!-- first element of the row-->
+                <TextView
+                    android:id="@+id/videoSiteItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    android:padding="5dip"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:textSize="16sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/videoTypeItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    android:padding="5dip"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:textSize="16sp"
+                    android:gravity="center"/>
+
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutItem"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@color/red"
+        android:textColor="@color/white"
+        android:text="Back"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
